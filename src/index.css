@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&family=Pinyon+Script&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'CustomPaintedPorch';
+  src: url('https://drive.google.com/uc?export=download&id=1vIBxj876gn8T22i9bVsZmNscpRO8leso') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+  --font-custom: "CustomPaintedPorch", "Pinyon Script", "Cormorant Garamond", serif;
+  
+  --color-ink: #050505;
+  --color-paper: #EAE3D2; /* Warm champagne/parchment instead of plain white */
+  --color-gold: #c5a059;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Custom utilities for the luxury feel */
+.glass-panel {
+  background: rgba(234, 227, 210, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(234, 227, 210, 0.05);
+}
+
+.hover-trigger .hover-target {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-trigger:hover .hover-target {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.text-vertical {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
